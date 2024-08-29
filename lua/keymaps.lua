@@ -114,14 +114,17 @@ end
 vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>lua _lazygit_toggle()<CR>", opts)
 
 -- Coc
--- Use `[g` and `]g` to navigate diagnostics
+-- " Use `[g` and `]g` to navigate diagnostics
 -- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
 vim.keymap.set("n", "[g", "<Plug>(coc-diagnostic-prev)", {silent = true})
 vim.keymap.set("n", "]g", "<Plug>(coc-diagnostic-next)", {silent = true})
 
 -- GoTo code navigation
-vim.keymap.set("n", "gd", "<Plug>(coc-definition)", {silent = true})
-vim.keymap.set("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
-vim.keymap.set("n", "gi", "<Plug>(coc-implementation)", {silent = true})
-vim.keymap.set("n", "gr", "<Plug>(coc-references)", {silent = true})
+vim.keymap.set("n", "<leader>h", "<cmd>call CocAction('doHover')<CR>", {silent = true})
+vim.keymap.set("n", "<leader>df", "<Plug>(coc-definition)", {silent = true})
+vim.keymap.set("n", "<leader>ty", "<Plug>(coc-type-definition)", {silent = true})
+vim.keymap.set("n", "<leader>im", "<Plug>(coc-implementation)", {silent = true})
+vim.keymap.set("n", "<leader>rf", "<Plug>(coc-references)", {silent = true})
+vim.keymap.set("n", "<leader>rn", "<Plug>(coc-rename)", {silent = true})
+vim.keymap.set("n", "<leader>fmt", "<Plug>(coc-format)", {silent = true})
 
